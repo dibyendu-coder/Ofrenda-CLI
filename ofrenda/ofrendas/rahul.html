@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ofrenda for Rahul</title>
+<style>
+  :root { --marigold:#f59e0b; --night:#12091c; --paper:#fdf3dc; }
+  body { margin:0; min-height:100vh; background:radial-gradient(circle at 50% 0%, #2a1442, var(--night) 70%);
+         color:var(--paper); font-family:Georgia, serif; display:flex; flex-direction:column; align-items:center; padding:3rem 1rem; }
+  h1 { font-weight:normal; letter-spacing:.08em; color:var(--marigold); margin:.2em 0; text-align:center; }
+  .sub { opacity:.7; font-style:italic; margin-bottom:2rem; }
+  .candles { display:flex; gap:2rem; margin:1rem 0 2rem; }
+  .flame { width:14px; height:28px; background:radial-gradient(ellipse at 50% 80%, #fff6c8, var(--marigold) 60%, transparent 72%);
+           border-radius:50% 50% 50% 50% / 60% 60% 40% 40%; animation:flicker 2.2s infinite ease-in-out; box-shadow:0 0 24px 8px #f59e0b66; }
+  .flame:nth-child(2){animation-delay:.4s} .flame:nth-child(3){animation-delay:.9s}
+  @keyframes flicker { 0%,100%{transform:scale(1) rotate(-1deg);opacity:.95} 50%{transform:scale(1.08,.94) rotate(2deg);opacity:.8} }
+  .card { max-width:34rem; line-height:1.7; background:#ffffff0d; border:1px solid #f59e0b55; border-radius:12px; padding:1.5rem 2rem; }
+  dl { max-width:34rem; width:100%; display:grid; grid-template-columns:auto 1fr; gap:.4rem 1rem; margin-top:2rem; }
+  dt { color:var(--marigold); } dd { margin:0; }
+  footer { margin-top:3rem; opacity:.5; font-size:.8rem; }
+</style></head><body>
+<h1>Rahul</h1>
+<div class="sub">friend</div>
+<div class="candles"><div class="flame"></div><div class="flame"></div><div class="flame"></div></div>
+<div class="card"><p>We remember Rahul. We remember the way he always said, “What’s up, bro?” It felt comfortable, a simple greeting that marked the start of another day. We remember the bike rides, those everyday trips you took with him. It was a consistent rhythm, a shared quiet comfort as you two explored wherever the road led. </p>
+<p>We remember the burgers too – a simple pleasure, a favorite thing he enjoyed. It reminds us of the easy conversations, the feeling of companionship during those shared moments. We recall the feeling of the wind on your faces as you pedaled, the way those rides became a routine, a connection built with every turn of the wheel. </p>
+<p>It&#39;s a quiet way to hold onto these things, to acknowledge the space he occupied in your life. We remember Rahul, and we hope those memories bring you some comfort.</p></div>
+<dl>
+  <dt>Food</dt><dd>burger</dd>
+  <dt>Song</dt><dd>no</dd>
+  <dt>Flower</dt><dd>no</dd>
+  <dt>Always said</dt><dd>&ldquo;what&#39;s up bro&rdquo;</dd>
+</dl>
+<footer>Written offline with gemma3:4b. Nothing left this machine.</footer>
+</body></html>

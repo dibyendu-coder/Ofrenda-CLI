@@ -1,0 +1,13 @@
+{
+  "answers": {
+    "name": "Rahul",
+    "relation": "friend",
+    "food": "burger",
+    "song": "no",
+    "flower": "no",
+    "phrase": "what's up bro",
+    "story": "We used to go for cycle ride everyday"
+  },
+  "remembrance": "We remember Rahul. We remember the way he always said, “What’s up, bro?” It felt comfortable, a simple greeting that marked the start of another day. We remember the bike rides, those everyday trips you took with him. It was a consistent rhythm, a shared quiet comfort as you two explored wherever the road led. \n\nWe remember the burgers too – a simple pleasure, a favorite thing he enjoyed. It reminds us of the easy conversations, the feeling of companionship during those shared moments. We recall the feeling of the wind on your faces as you pedaled, the way those rides became a routine, a connection built with every turn of the wheel. \n\nIt's a quiet way to hold onto these things, to acknowledge the space he occupied in your life. We remember Rahul, and we hope those memories bring you some comfort.",
+  "model": "gemma3:4b"
+}
