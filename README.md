@@ -43,7 +43,8 @@ The stories are the fragile part. They live in a few heads and a few chat thread
 2. Your answers go to a model served by [Ollama](https://ollama.com) on `localhost`.
 3. The model writes a short remembrance, bound by a strict system prompt to use only what you told it.
 4. `ofrenda` renders a self-contained HTML altar: swaying papel picado banner, flickering candles, drifting marigold petals, the remembrance typed out line by line, and an offerings tier for the food, song, flower, and phrase. Open it in any browser, print it, send it to family. Motion turns off for visitors who prefer reduced motion.
-5. Optional `--chat`: talk to an **echo**. It answers only from the memories you gave, says "That is not in the memories you shared." when asked about anything else, and tells you plainly it is an echo, not them.
+5. An optional photo (jpg, png, webp, gif, up to 3 MB) is embedded as base64 in a round marigold frame, so the page stays one file. Every run also rebuilds `ofrendas/index.html`: one shared altar with a card per person you have remembered.
+6. Optional `--chat`: talk to an **echo**. It answers only from the memories you gave, says "That is not in the memories you shared." when asked about anything else, and tells you plainly it is an echo, not them.
 
 ## Quickstart
 
@@ -60,7 +61,9 @@ Your altar lands in `ofrendas/<name>.html`, with the raw answers in `ofrendas/<n
 | Want to... | Do this |
 | --- | --- |
 | Use a different model | `OFRENDA_MODEL=llama3.2 node ofrenda.mjs` |
-| Talk to an echo of them after the altar | `node ofrenda.mjs --chat` |
+| Talk to an echo of them after the altar (chat is saved into the altar page) | `node ofrenda.mjs --chat` |
+| Spanish questions, prompts, and altar | `node ofrenda.mjs --lang es` |
+| Rebuild the shared altar of everyone you have remembered | `node ofrenda.mjs --altar` |
 | Run with no model at all | `node ofrenda.mjs --no-ai` |
 | Point at another Ollama box | `OLLAMA_HOST=http://192.168.1.20:11434 node ofrenda.mjs` |
 | Change output folder | `OFRENDA_OUT=altars node ofrenda.mjs` |
@@ -104,10 +107,9 @@ A memorial that might vanish when a company changes its API is not much of a mem
 
 ## Roadmap
 
-- Photo slot on the altar, read from a local file path
 - Voice input with a local speech model, so elders can tell stories aloud
-- Multiple people on one shared altar
-- Spanish and other-language prompts
+- More languages beyond English and Spanish
+- Photo resizing so large pictures stay small inside the page
 
 ## Project layout
 
