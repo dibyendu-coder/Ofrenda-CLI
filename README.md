@@ -42,7 +42,8 @@ The stories are the fragile part. They live in a few heads and a few chat thread
 1. A terminal interview asks for a name, a relationship, a food, a song, a scent, a phrase they always said, and one story you never want to lose.
 2. Your answers go to a model served by [Ollama](https://ollama.com) on `localhost`.
 3. The model writes a short remembrance, bound by a strict system prompt to use only what you told it.
-4. `ofrenda` renders a self-contained HTML page with flickering CSS candles. Open it in any browser, print it, send it to family.
+4. `ofrenda` renders a self-contained HTML altar: swaying papel picado banner, flickering candles, drifting marigold petals, the remembrance typed out line by line, and an offerings tier for the food, song, flower, and phrase. Open it in any browser, print it, send it to family. Motion turns off for visitors who prefer reduced motion.
+5. Optional `--chat`: talk to an **echo**. It answers only from the memories you gave, says "That is not in the memories you shared." when asked about anything else, and tells you plainly it is an echo, not them.
 
 ## Quickstart
 
@@ -59,6 +60,7 @@ Your altar lands in `ofrendas/<name>.html`, with the raw answers in `ofrendas/<n
 | Want to... | Do this |
 | --- | --- |
 | Use a different model | `OFRENDA_MODEL=llama3.2 node ofrenda.mjs` |
+| Talk to an echo of them after the altar | `node ofrenda.mjs --chat` |
 | Run with no model at all | `node ofrenda.mjs --no-ai` |
 | Point at another Ollama box | `OLLAMA_HOST=http://192.168.1.20:11434 node ofrenda.mjs` |
 | Change output folder | `OFRENDA_OUT=altars node ofrenda.mjs` |
@@ -85,6 +87,8 @@ A memorial that might vanish when a company changes its API is not much of a mem
 **The model is not trusted with facts.** The system prompt tells it to use only details you provided and to leave gaps empty rather than fill them. A remembrance with an invented detail is worse than none.
 
 **The human stays in charge.** Small models can still drift. The output is a draft: `ofrenda` tells you to read it and edit it, and the raw answers are saved beside it so nothing you said is lost.
+
+**The echo is honest about what it is.** Talking to a simulated dead person can go wrong. The echo prints a notice before it starts, never claims to be the person, never invents advice or messages from beyond, and points you to someone you trust if you seem in real distress.
 
 **There is a no-AI mode.** `--no-ai` builds the same page from a plain template. The altar should not depend on a model being installed.
 
